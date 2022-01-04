@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <HelloWorld msg="Welcome to Your Vue.js App" @created="test"/>
     <!-- <testShow v-if="0"/> -->
     <!-- <testCanvas></testCanvas> -->
     <!-- <testAudio></testAudio> -->
     <!-- <testSvg></testSvg> -->
     <!-- <testText></testText> -->
-    <test-flip></test-flip>
+    <!-- <test-flip></test-flip> -->
   </div>
 </template>
 
@@ -33,6 +33,11 @@ export default {
     testJG,
     testUpload,
     testFlip
+  },
+  methods:{
+    test(...rest){
+      console.log("rest:", rest);
+    }
   }
 };
 </script>

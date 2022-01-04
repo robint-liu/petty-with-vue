@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h1>{{ msgstring }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -88,7 +89,7 @@
         <p class="text">this is a text!</p>
       </div>
     </van-overlay>
-    <van-button @click="visible = true">click me</van-button>
+    <van-button @click="changeType">click me</van-button>
   </div>
 </template>
 
@@ -97,11 +98,30 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      visible: false
+      visible: false,
+      type: 1
     };
   },
   props: {
     msg: String
+  },
+  created(){
+    console.log("created");
+  },
+  mounted(){
+    console.log("created");
+  },
+  methods:{
+    changeType(){
+      debugger
+      this.type = !this.type
+    }
+  },
+  computed:{
+    msgstring(value, oldvalue){
+      console.log("value, oldvalue:", value, oldvalue);
+      return this.msg + this.type
+    }
   }
 };
 </script>

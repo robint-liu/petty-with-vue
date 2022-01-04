@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
-    "release": "release-it"
+    "release": "release-it",
+    "inspect": "vue inspect > output.js"
   },
   "dependencies": {
     "@i61/fancy-lib-flexible": "0.0.2",
+    "alife-logger": "1.8.30",
     "core-js": "^3.6.5",
     "html2canvas": "1.0.0-rc.7",
     "vant": "2.12.2",
